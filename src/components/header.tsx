@@ -41,7 +41,7 @@ export default function Header() {
                 <>
                   <button
                     className="z-30 cursor-pointer size-20 text-4xl text-detailsLightMode dark:text-detailsDarkMode"
-                    onClick={() => {setIsOpen(!isOpen); document.exitFullscreen()}}
+                    onClick={() => {setIsOpen(!isOpen)}}
                   >
                     x
                   </button>

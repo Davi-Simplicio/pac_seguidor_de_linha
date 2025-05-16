@@ -30,7 +30,7 @@ export default function FontChanger() {
     <div className="lg:w-11/12 w-0 h-full">
       <div className="flex w-full justify-center *:fill-fontTextLightMode dark:*:fill-fontTextDarkMode gap-6 items-center">
         <FontIcon />
-        <div className="flex items-center w-10/12 bg-secondaryLightMode dark:bg-secondaryDarkMode lg:p-4 rounded-sm justify-center">
+        <div className="flex items-center w-10/12 bg-secondaryLightMode dark:bg-secondaryDarkMode lg:p-4 rounded-sm justify-center text-fontTextLightMode dark:text-fontTextDarkMode">
           <button
             className="flex items-center justify-center h-2 lg:p-2 cursor-pointer"
             onClick={() => {
@@ -67,7 +67,7 @@ export default function FontChanger() {
             />
           </div>
           <button
-            className="flex items-center justify-center h-2 lg:p-2 cursor-pointer"
+            className="flex items-center justify-center h-2 lg:p-2 cursor-pointer text-fontTextLightMode dark:text-fontTextDarkMode"
             onClick={() => {
               if (fontsList.indexOf(fontContent) + 1 < fontsList.length - 6) {
                 setFontContent(fontsList[fontsList.indexOf(fontContent) + 1]);
