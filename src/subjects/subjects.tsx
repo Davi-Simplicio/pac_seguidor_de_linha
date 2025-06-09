@@ -1,216 +1,190 @@
 export const subjects: Subject[] = [
   {
-    slug: "components",
+    slug: "fundamentos",
     id: 1,
-    title: "Components",
+    title: "Fundamentos",
     image: <div className="h-64 sm:w-80 w-full bg-blue-500" />,
     content: [
       {
         id: "1",
-        title: "Introduction",
-        content: `The construction of a line-following robot begins with understanding its essential components. These include sensors, motors, a chassis, and a controller board that work together to enable movement and navigation.`,
+        title: "Introdução",
+        content: (
+          <div className="space-y-2">
+            <p>
+              <strong>Fundamentos de Eletrônica, Arduino e Primeira Programação:</strong> Seja bem-vindo à primeira aula do nosso minicurso sobre <em>Robôs Seguidores de Linha com Arduino</em>!
+            </p>
+            <p>
+              Neste encontro, daremos os primeiros passos no mundo da eletrônica e da programação, utilizando uma das plataformas mais acessíveis e didáticas: o <code>Arduino</code>.
+            </p>
+          </div>
+        ),
       },
       {
         id: "2",
-        title: "Image",
-        content: <></>,
-      },
-      {
-        id: "3",
-        title: "Conclusion",
-        content: `Choosing quality components is critical for the robot’s accuracy and stability. Each part must be integrated properly to ensure consistent performance in following a path.`,
+        title: "Objetivo da Aula",
+        content: (
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Mostrar que aprender tecnologia pode ser simples, prático e divertido.</li>
+            <li>Explicar os conceitos básicos de eletrônica: protoboard, resistores e LEDs.</li>
+            <li>Realizar o primeiro circuito prático com Arduino.</li>
+          </ul>
+        ),
       },
     ],
     subtitles: [
       {
-        slug: "basic-components",
+        slug: "introducao-ao-arduino-e-ide",
         id: 11,
-        title: "Basic Components",
+        title: "Introdução ao Arduino e IDE",
         image: <></>,
         content: [
           {
             id: "1",
-            title: "Introduction",
-            content: `The robot's base components are the motors, wheels, sensor array, and control board. These form the foundation of the project.`,
+            title: "Definição",
+            content: (
+              <p>
+                O <strong>Arduino</strong> é uma plataforma criada para facilitar o aprendizado de <em>eletrônica</em> e <em>programação</em>, funcionando como um mini computador que pode controlar diversos dispositivos.
+              </p>
+            ),
           },
           {
             id: "2",
-            title: "Image",
-            content: <></>,
+            title: "Vantagens",
+            content: (
+              <p>
+                Barato, fácil de usar e com código aberto, permite modificações e compartilhamento de projetos, tornando-o acessível a todos.
+              </p>
+            ),
           },
           {
             id: "3",
-            title: "Conclusion",
-            content: `With just a few parts and careful assembly, you can create a simple yet effective robot for line-following tasks.`,
+            title: "Popularidade",
+            content: (
+              <p>
+                Possui uma enorme comunidade global com muitos recursos didáticos, sendo amplamente usado em escolas, universidades e oficinas.
+              </p>
+            ),
           },
         ],
         subtitles: [],
       },
       {
-        slug: "how-to-assemble",
+        slug: "robo-seguidor-de-linha",
         id: 12,
-        title: "How to Assemble",
+        title: "O que é um robô seguidor de linha?",
         image: <></>,
         content: [
           {
             id: "1",
-            title: "Introduction",
-            content: `Start by mounting the motors on the chassis, connecting the wheels, and wiring the sensors to the controller board.`,
+            title: "Funcionamento",
+            content: (
+              <p>
+                Utiliza sensores para detectar uma linha no chão e ajustar o movimento com base nessas leituras, com controle feito por um <code>Arduino</code>.
+              </p>
+            ),
           },
           {
             id: "2",
-            title: "Image",
-            content: <></>,
+            title: "Aplicações",
+            content: (
+              <p>
+                Excelente projeto para iniciantes em robótica, com aplicação em feiras de ciências e competições educacionais.
+              </p>
+            ),
           },
         ],
         subtitles: [],
       },
       {
-        slug: "main-functions",
+        slug: "protoboard",
         id: 13,
-        title: "Main Functions",
+        title: "Protoboard — O que é e para que serve?",
         image: <></>,
         content: [
           {
             id: "1",
-            title: "Introduction",
-            content: `Each component has a specific role—motors drive motion, sensors detect lines, and the controller makes decisions based on sensor input.`,
+            title: "Definição",
+            content: (
+              <p>
+                Placa usada para montar circuitos sem necessidade de solda. Ideal para prototipagem rápida.
+              </p>
+            ),
           },
           {
             id: "2",
-            title: "Image",
-            content: <></>,
-          },
-          {
-            id: "3",
-            title: "Function 1",
-            content: `Motors receive PWM signals to control speed and direction.`,
-          },
-          {
-            id: "4",
-            title: "Function 2",
-            content: `IR sensors detect the contrast between line and surface.`,
-          },
-          {
-            id: "5",
-            title: "Function 3",
-            content: `The microcontroller interprets sensor input and decides motion strategy.`,
+            title: "Funcionamento",
+            content: (
+              <ul className="list-disc ml-6">
+                <li>Furos interligados por trilhas internas.</li>
+                <li>Áreas centrais para componentes e laterais para alimentação.</li>
+              </ul>
+            ),
           },
         ],
         subtitles: [],
       },
-    ],
-  },
-  {
-    slug: "line-follower",
-    id: 2,
-    title: "Line Follower",
-    image: <div className="h-64 sm:w-96 w-full bg-blue-500" />,
-    content: [
       {
-        id: "1",
-        title: "How It Works",
-        content: `A line-following robot uses infrared sensors to detect a black line on a white surface. The robot adjusts its movement based on the position of the line relative to the sensors.`,
-      },
-    ],
-    subtitles: [
-      {
-        slug: "line-detection",
-        id: 21,
-        title: "Line Detection",
+        slug: "resistores-e-leds",
+        id: 14,
+        title: "Resistores e LEDs",
         image: <></>,
         content: [
           {
             id: "1",
-            title: "Straight Paths",
-            content: `In a straight line, the central sensor stays aligned with the path while side sensors assist in minor corrections.`,
+            title: "Resistores",
+            content: (
+              <p>
+                Componentes que <strong>limitam a corrente elétrica</strong> para proteger dispositivos. Possuem faixas coloridas que indicam seu valor em <em>Ohms (Ω)</em>.
+              </p>
+            ),
+          },
+          {
+            id: "2",
+            title: "LEDs",
+            content: (
+              <div className="space-y-1">
+                <p><strong>LED</strong> = Diodo Emissor de Luz. Tem polaridade definida:</p>
+                <ul className="list-disc ml-6">
+                  <li><strong>Perna maior:</strong> positivo (ânodo)</li>
+                  <li><strong>Perna menor:</strong> negativo (cátodo)</li>
+                </ul>
+                <p>Deve sempre estar em série com um resistor.</p>
+              </div>
+            ),
           },
         ],
         subtitles: [],
       },
-    ],
-  },
-  {
-    slug: "hardware",
-    id: 3,
-    title: "Hardware",
-    image: <div className="h-64 sm:w-96 w-full bg-blue-500" />,
-    content: [
       {
-        id: "1",
-        title: "Key Hardware",
-        content: `The robot’s physical components include the chassis, power source, DC motors, IR sensors, and the main control board (like an Arduino or ESP32).`,
-      },
-    ],
-    subtitles: [
-      {
-        slug: "main-hardware",
-        id: 31,
-        title: "Main Hardware",
+        slug: "codigo-arduino",
+        id: 15,
+        title: "Estrutura de um código em Arduino",
         image: <></>,
         content: [
           {
             id: "1",
-            title: "Motors",
-            content: `DC motors provide movement. Paired with an H-bridge driver, they allow for precise direction and speed control.`,
+            title: "Funções Principais",
+            content: (
+              <div className="mockup-code">
+                <pre data-prefix="$"><code>void setup() &#123;</code></pre>
+                <pre data-prefix="~"><code>  // Configuração inicial</code></pre>
+                <pre data-prefix="$"><code>&#125;</code></pre>
+                <pre data-prefix="$"><code>void loop() &#123;</code></pre>
+                <pre data-prefix="~"><code>  // Executado continuamente</code></pre>
+                <pre data-prefix="$"><code>&#125;</code></pre>
+              </div>
+            ),
           },
-        ],
-        subtitles: [],
-      },
-    ],
-  },
-  {
-    slug: "code",
-    id: 4,
-    title: "Code",
-    image: <div className="h-64 sm:w-96 w-full bg-blue-500" />,
-    content: [
-      {
-        id: "1",
-        title: "Core Functions",
-        content: `The code interprets sensor inputs, calculates necessary movement, and adjusts motor speed using algorithms like PID control.`,
-      },
-    ],
-    subtitles: [
-      {
-        slug: "main-functions",
-        id: 41,
-        title: "Main Functions",
-        image: <></>,
-        content: [
           {
-            id: "1",
-            title: "Conditional Logic",
-            content: `Based on sensor input, the robot decides whether to go straight, turn left, or right. This logic is implemented with simple if/else or switch statements.`,
-          },
-        ],
-        subtitles: [],
-      },
-    ],
-  },
-  {
-    slug: "track",
-    id: 5,
-    title: "Track",
-    image: <div className="h-64 sm:w-96 w-full bg-blue-500" />,
-    content: [
-      {
-        id: "1",
-        title: "Course Design",
-        content: `Designing a test track helps in debugging and refining the robot’s movement. It can include curves, intersections, and dead ends.`,
-      },
-    ],
-    subtitles: [
-      {
-        slug: "course",
-        id: 51,
-        title: "Course",
-        image: <></>,
-        content: [
-          {
-            id: "1",
-            title: "Track 1",
-            content: `The basic course includes straight lines and 90-degree turns. This layout is ideal for testing sensor sensitivity and response algorithms.`,
+            id: "2",
+            title: "Entradas e Saídas",
+            content: (
+              <ul className="list-disc ml-6">
+                <li><code>pinMode()</code>: define o modo de um pino</li>
+                <li><code>digitalRead()</code>: lê o valor de entrada</li>
+                <li><code>digitalWrite()</code>: escreve valor de saída</li>
+              </ul>
+            ),
           },
         ],
         subtitles: [],
@@ -218,7 +192,6 @@ export const subjects: Subject[] = [
     ],
   },
 ];
-
 
 export interface Subject {
   id: number;

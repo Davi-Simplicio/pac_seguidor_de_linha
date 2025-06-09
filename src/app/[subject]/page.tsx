@@ -81,7 +81,7 @@ export default function Main({
           <section className="w-10/12 flex flex-col gap-10">
             <section className="w-full h-max flex sm:flex-row flex-col justify-center gap-5">
               <div>{subjectObject?.image}</div>
-              <div className="flex flex-col gap-4">
+              <div className="w-7/12 flex flex-col gap-4">
                 <h1
                   className={
                     "text-fontTitleLightMode dark:text-fontTitleDarkMode " +
@@ -107,7 +107,7 @@ export default function Main({
               }
             >
               {subjectObject?.content.map((content, index) => (
-                <div key={index}>{content.content}</div>
+                <div key={index}>{index!=0?content.content:""}</div>
               ))}
             </section>
             <div className="">
@@ -156,7 +156,7 @@ export default function Main({
         </section>
       </div>
 
-      <div>
+      <div className="mb-10">
         <Footer />
       </div>
     </motion.main>
