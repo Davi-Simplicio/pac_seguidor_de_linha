@@ -1,9 +1,26 @@
+export interface Content {
+  id: string;
+  title: string;
+  content: string | React.ReactNode;
+}
+
+export interface Subject {
+  id: number;
+  slug: string;
+  title: string;
+  image: React.ReactNode;
+  content: Content[];
+  subtitles?: Subject[];
+}
+
 export const subjects: Subject[] = [
   {
     slug: "fundamentos",
     id: 1,
     title: "Fundamentos",
-    image: <img className="h-64 sm:w-80 w-full" src="/arduino.webp" alt="arduino"/>,
+    image: (
+      <img className="h-64 sm:w-80 w-full" src="/arduino.webp" alt="arduino" />
+    ),
     content: [
       {
         id: "1",
@@ -11,9 +28,8 @@ export const subjects: Subject[] = [
         content: (
           <div className="space-y-2">
             <p>
-              
-              Fundamentos de Eletrônica, Arduino e Primeira Programação:
-              vindo à primeira aula do nosso minicurso sobre{" "}
+              Fundamentos de Eletrônica, Arduino e Primeira Programação: vindo à
+              primeira aula do nosso minicurso sobre{" "}
               <em>Robôs Seguidores de Linha com Arduino</em>!
             </p>
             <p>
@@ -242,24 +258,27 @@ export const subjects: Subject[] = [
     ],
   },
 
-
-
-
   {
     slug: "componentes-e-testes",
     id: 2,
     title: "Exploração",
-    image: <img className="h-64 sm:w-80 w-full" src="/line-follower-robotic.webp" alt="arduino"/>,
+    image: (
+      <img
+        className="h-64 sm:w-80 w-full"
+        src="/line-follower-robotic.webp"
+        alt="arduino"
+      />
+    ),
     content: [
       {
         id: "1",
         title: "Objetivo da Aula",
         content: (
           <p>
-            Exploração dos Componentes do Robô e Testes Práticos:
-            Compreender o funcionamento dos principais componentes do robô
-            seguidor de linha e realizar testes práticos com sensores e motores
-            para entender suas funções.
+            Exploração dos Componentes do Robô e Testes Práticos: Compreender o
+            funcionamento dos principais componentes do robô seguidor de linha e
+            realizar testes práticos com sensores e motores para entender suas
+            funções.
           </p>
         ),
       },
@@ -512,15 +531,23 @@ export const subjects: Subject[] = [
     slug: "entendendo-o-codigo",
     id: 3,
     title: "Código e Teste",
-    image: <img className="h-64 sm:w-80 w-full" src="/arduino_code.jpg" alt="arduino"/>,
+    image: (
+      <img
+        className="h-64 sm:w-80 w-full"
+        src="/arduino_code.jpg"
+        alt="arduino"
+      />
+    ),
     content: [
       {
         id: "1",
         title: "Objetivo da Aula",
         content: (
           <p>
-            Entendendo o Código e Testando os Robôs:
-            Compreender os principais blocos do código do robô seguidor de linha e aplicar esse entendimento em testes práticos na pista, analisando o comportamento real do robô em função das leituras dos sensores.
+            Entendendo o Código e Testando os Robôs: Compreender os principais
+            blocos do código do robô seguidor de linha e aplicar esse
+            entendimento em testes práticos na pista, analisando o comportamento
+            real do robô em função das leituras dos sensores.
           </p>
         ),
       },
@@ -537,7 +564,10 @@ export const subjects: Subject[] = [
             title: "Conceitos Chave",
             content: (
               <ul className="list-disc ml-6">
-                <li>Mapeamento de pinos com <code>#define</code> e <code>const int</code></li>
+                <li>
+                  Mapeamento de pinos com <code>#define</code> e{" "}
+                  <code>const int</code>
+                </li>
                 <li>Relação entre código e hardware</li>
               </ul>
             ),
@@ -547,13 +577,29 @@ export const subjects: Subject[] = [
             title: "Funções Principais",
             content: (
               <ul className="list-disc ml-6">
-                <li><code>setup()</code>: inicialização</li>
-                <li><code>loop()</code>: execução contínua</li>
-                <li><code>readSensors()</code>: captação da linha</li>
-                <li><code>followLineMEF()</code>: decisão de movimento</li>
-                <li><code>motorOption()</code> / <code>motorControl()</code>: controle dos motores</li>
-                <li><code>motorStop()</code>: limite de funcionamento</li>
-                <li><code>ledControl()</code> / <code>rgbControl()</code>: estados visuais</li>
+                <li>
+                  <code>setup()</code>: inicialização
+                </li>
+                <li>
+                  <code>loop()</code>: execução contínua
+                </li>
+                <li>
+                  <code>readSensors()</code>: captação da linha
+                </li>
+                <li>
+                  <code>followLineMEF()</code>: decisão de movimento
+                </li>
+                <li>
+                  <code>motorOption()</code> / <code>motorControl()</code>:
+                  controle dos motores
+                </li>
+                <li>
+                  <code>motorStop()</code>: limite de funcionamento
+                </li>
+                <li>
+                  <code>ledControl()</code> / <code>rgbControl()</code>: estados
+                  visuais
+                </li>
               </ul>
             ),
           },
@@ -562,7 +608,9 @@ export const subjects: Subject[] = [
             title: "Casos Comuns",
             content: (
               <p>
-                Exemplo: quando sensores leem <code>001100</code> ou <code>000110</code>, mostrar no quadro o que isso significa e como o robô se comporta com base nisso.
+                Exemplo: quando sensores leem <code>001100</code> ou{" "}
+                <code>000110</code>, mostrar no quadro o que isso significa e
+                como o robô se comporta com base nisso.
               </p>
             ),
           },
@@ -579,7 +627,10 @@ export const subjects: Subject[] = [
             id: "4",
             title: "Objetivo",
             content: (
-              <p>Relacionar o comportamento observado na pista com o que foi discutido no código.</p>
+              <p>
+                Relacionar o comportamento observado na pista com o que foi
+                discutido no código.
+              </p>
             ),
           },
           {
@@ -589,7 +640,10 @@ export const subjects: Subject[] = [
               <ul className="list-disc ml-6">
                 <li>Ligar e testar robôs individualmente</li>
                 <li>Verificar sensores e motores</li>
-                <li>Colocar o robô na pista: segue linha? responde a curvas? perde o trajeto?</li>
+                <li>
+                  Colocar o robô na pista: segue linha? responde a curvas? perde
+                  o trajeto?
+                </li>
                 <li>Discutir com alunos o que foi ativado no código</li>
                 <li>Pausar, repetir e ajustar quando necessário</li>
               </ul>
@@ -610,8 +664,12 @@ export const subjects: Subject[] = [
             content: (
               <ul className="list-disc ml-6">
                 <li>O que funcionou bem? O que pode melhorar?</li>
-                <li>Ideias para melhorar o código (ex: cruzamentos, semáforos)</li>
-                <li>Preparação para a competição: o que observar na próxima aula?</li>
+                <li>
+                  Ideias para melhorar o código (ex: cruzamentos, semáforos)
+                </li>
+                <li>
+                  Preparação para a competição: o que observar na próxima aula?
+                </li>
               </ul>
             ),
           },
@@ -643,18 +701,22 @@ export const subjects: Subject[] = [
       },
     ],
   },
-    {
+  {
     slug: "competicao-entre-equipes",
     id: 4,
     title: "Competição",
-    image: <img className="h-64 sm:w-80 w-full" src="/track.jpeg" alt="arduino"/>,
+    image: (
+      <img className="h-64 sm:w-80 w-full" src="/track.jpeg" alt="arduino" />
+    ),
     content: [
       {
         id: "1",
         title: "Objetivo da Aula",
         content: (
           <p>
-            Colocar os robôs em prova numa pista desafiadora. Promover o trabalho em equipe, solução de problemas e espírito colaborativo por meio de uma competição.
+            Colocar os robôs em prova numa pista desafiadora. Promover o
+            trabalho em equipe, solução de problemas e espírito colaborativo por
+            meio de uma competição.
           </p>
         ),
       },
@@ -671,12 +733,16 @@ export const subjects: Subject[] = [
             title: "Descrição",
             content: (
               <ul className="list-disc ml-6">
-                <li>Formação das equipes (se ainda não tiverem sido formadas)</li>
+                <li>
+                  Formação das equipes (se ainda não tiverem sido formadas)
+                </li>
                 <li>Explicação das regras da competição</li>
                 <li>Apresentação dos robôs e estratégias</li>
                 <li>Corridas eliminatórias ou por pontos</li>
                 <li>Premiação simbólica ou reconhecimento das equipes</li>
-                <li>Roda final de conversa: aprendizados, dificuldades, sugestões</li>
+                <li>
+                  Roda final de conversa: aprendizados, dificuldades, sugestões
+                </li>
               </ul>
             ),
           },
@@ -698,7 +764,9 @@ export const subjects: Subject[] = [
                 <li>Cronômetro ou aplicativo de tempo</li>
                 <li>Sistema de pontuação ou eliminação</li>
                 <li>Fita preta extra para ajustes</li>
-                <li>Prêmios simbólicos (medalhas, certificados, doces, etc.)</li>
+                <li>
+                  Prêmios simbólicos (medalhas, certificados, doces, etc.)
+                </li>
                 <li>Câmera ou celular para registro (opcional)</li>
                 <li>Pistas pequenas</li>
                 <li>Pista grande</li>
@@ -712,18 +780,3 @@ export const subjects: Subject[] = [
     ],
   },
 ];
-
-export interface Subject {
-  id: number;
-  slug: string;
-  title: string;
-  image: React.ReactNode;
-  content: Content[];
-  subtitles?: Subject[];
-}
-
-export interface Content {
-  id: string;
-  title: string;
-  content: string | React.ReactNode;
-}
