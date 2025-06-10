@@ -12,7 +12,7 @@ export default function LeftSideBar({ subject }: { subject: Subject }) {
                 <div className="flex flex-col gap-4">
                     {item.content.map((content,index)=>{
                         return(
-                            <a key={index} href={"#"+content.id} className="truncate w-52 h-10 p-4 flex justify-start pl-4 items-center bg-secondaryLightMode dark:bg-secondaryDarkMode rounded-lg text-fontTitleLightMode dark:text-fontTitleDarkMode">
+                            <a key={index} href={"#"+content.id} className="truncate w-max min-w-52 h-10 p-4 flex justify-start pl-4 items-center bg-secondaryLightMode dark:bg-secondaryDarkMode rounded-lg text-fontTitleLightMode dark:text-fontTitleDarkMode">
                                 {content.title}
                             </a>
                         )

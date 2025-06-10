@@ -116,7 +116,7 @@ export default function Main({
                   <div
                     key={index}
                     id={subItem.slug}
-                    className="flex flex-col gap-10 scroll-mt-12 text-justify "
+                    className="flex flex-col gap-10 scroll-mt-24 text-justify "
                   >
                     <div
                       className={
@@ -136,7 +136,7 @@ export default function Main({
                         <div
                           key={index}
                           id={content.id}
-                          className="scroll-mt-12 flex flex-col"
+                          className="scroll-mt-24 flex flex-col"
                         >
                           <div className="pt-2 pb-2 text-fontTitleLightMode dark:text-fontTitleDarkMode">
                             {content.title}
